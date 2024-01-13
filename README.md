@@ -23,6 +23,7 @@ ask for the db_user and db_password to your manager or tech lead
 
 3. Provide the requred permisions to the new role using: ALTER ROLE db_user CREATEDB
 
+
 4. Proceed creating the db typing rails db:create on your terminal from the root of this project
 
 5. Run the migratoin using: rails db:migrate
