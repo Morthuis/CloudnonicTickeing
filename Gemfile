@@ -37,6 +37,7 @@ gem "bootsnap", require: false
 
 gem 'dotenv-rails', '~> 2.8', '>= 2.8.1'
 gem 'devise', '~> 4.9', '>= 4.9.3'
+gem 'byebug', '~> 11.1', '>= 11.1.3'
 
 #RuboCop
 gem 'rubocop', require: false
