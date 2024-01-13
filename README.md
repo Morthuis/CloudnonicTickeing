@@ -22,7 +22,7 @@ up a new role following the steps below:
 ask for the db_user and db_password to your manager or tech lead
 
 3. Provide the requred permisions to the new role using: ALTER ROLE db_user CREATEDB
-GRANT ALL PRIVILEGES ON DATABASE nombre_de_basedatos TO nombre_de_usuario;
+
 
 4. Proceed creating the db typing rails db:create on your terminal from the root of this project
 
