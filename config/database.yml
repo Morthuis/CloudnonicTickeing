@@ -7,7 +7,7 @@ default: &default
 
 development:
   <<: *default
-  database: cloudnonic_tickeing_development
+  database: <%= ENV["DATABASE_DEVELOPMENT_NAME"] %>
   host: <%= ENV["DATABASE_DEVELOPMENT_HOST"] %>
   username: <%= ENV["DATABASE_DEVELOPMENT_USER"] %>
   password: <%= ENV["DATABASE_DEVELOPMENT_PASSWORD"] %>
