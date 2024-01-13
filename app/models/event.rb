@@ -2,8 +2,8 @@ class Event < ApplicationRecord
   after_update :recalculate_total_price_for_users, if: :ticket_price_changed?
   has_many :tickets
   belongs_to :user
-
-
+  validates :name, uniqueness: true
+  validates :tickets_threshold, numericality: { greater_than: 0 }
 
   private
 
