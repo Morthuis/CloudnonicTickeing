@@ -4,8 +4,35 @@
 # model remove the "{}" from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
-# column: value
-#
-two: {}
-# column: value
+event1:
+  name: The best event 1
+  location: Las Vegas 1
+  description: You will be able to spent time with you friends and 1
+  start_time:  2024-01-13 03:00:07.290192699 -0500
+  end_time: 2024-01-13 03:00:07.290192699 -0500
+  ticket_price: 10
+  tickets_threshold: 150
+  user_id: 1
+  id: 1
+
+event2:
+  name: The best event 2
+  location: Las Vegas 2
+  description: You will be able to spent time with you friends and 2
+  start_time:  2024-01-13 03:00:07.290192699 -0500
+  end_time: 2024-01-13 03:00:07.290192699 -0500
+  ticket_price: 10
+  tickets_threshold: 120
+  user_id: 1
+  id: 2
+
+event3:
+  name: The best event 3
+  location: Las Vegas 3
+  description: You will be able to spent time with you friends and 3
+  start_time:  2024-01-13 03:00:07.290192699 -0500
+  end_time: 2024-01-13 03:00:07.290192699 -0500
+  ticket_price: 10
+  tickets_threshold: 130
+  user_id: 2
+  id: 3
