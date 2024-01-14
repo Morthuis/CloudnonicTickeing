@@ -1,7 +1,6 @@
 class Api::V1::EventsController < ApplicationController
   rescue_from StandardError, with: :manage_general_error
   respond_to :json
-
   before_action :authenticate_api_v1_user!, only: %i[create update]
 
   def index
@@ -20,9 +19,10 @@ class Api::V1::EventsController < ApplicationController
   end
 
   def update
-    response = Api::V1::Events::Update.call(event_params, params[:id].to_i, current_api_v1_user)
+    response = Api::V1::Events::Update.call(event_params, params[:id].to_i, current_api_v1_user.id)
     render json: { success: response[:success], data: response[:data] }, status: response[:status]
   end
+
 
   private
 

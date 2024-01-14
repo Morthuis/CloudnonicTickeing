@@ -4,6 +4,18 @@ class Event < ApplicationRecord
   belongs_to :user
   validates :name, uniqueness: true
   validates :tickets_threshold, numericality: { greater_than: 0 }
+  validates :ticket_price, numericality: { greater_than: 0 }
+
+
+
+
+  def tickets_available?(quantity)
+    tickets.pluck(:quantity).sum + quantity <= tickets_threshold
+  end
+
+  def tickets_remind
+    tickets_threshold - tickets.pluck(:quantity).sum
+  end
 
   private
 
@@ -12,6 +24,6 @@ class Event < ApplicationRecord
   end
 
   def recalculate_total_price_for_users
-    print ">>>>>>>>>>>>>>>>#{self.ticket_price}<<<<<<<<<<<<<<<<<<<<"
+    tickets.each { |ticket| ticket.update!(total_price: ticket.quantity * ticket_price) }
   end
 end
