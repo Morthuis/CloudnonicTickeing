@@ -6,6 +6,7 @@ Rails.application.routes.draw do
       resources :events, except: %i[destroy new]
       resources :tickets, except: %i[index new destroy]
       get 'event_tickets/:id', to: 'tickets#tickets_list'
+      get 'tickets_availability/:id', to: 'tickets#tickets_availability'
     end
   end
 end

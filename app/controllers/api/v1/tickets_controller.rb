@@ -23,6 +23,11 @@ class Api::V1::TicketsController < ApplicationController
     render json: { success: response[:success], data: response[:data] }, status: response[:status]
   end
 
+  def tickets_availability
+    response = Api::V1::Tickets::TicketsAvailability.call(params[:id])
+    render json: { success: response[:success], data: response[:data] }, status: response[:status]
+  end
+
   private
 
   def ticket_params
