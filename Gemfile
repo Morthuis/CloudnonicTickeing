@@ -39,11 +39,14 @@ gem 'dotenv-rails', '~> 2.8', '>= 2.8.1'
 gem 'devise', '~> 4.9', '>= 4.9.3'
 gem 'byebug', '~> 11.1', '>= 11.1.3'
 
+
 #RuboCop
 gem 'rubocop', require: false
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
+  gem 'rspec-rails'
+  gem 'factory_bot_rails', '~> 6.4', '>= 6.4.3'
   gem "debug", platforms: %i[ mri mswin mswin64 mingw x64_mingw ]
 end
 
