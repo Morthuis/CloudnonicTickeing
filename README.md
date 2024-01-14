@@ -22,12 +22,12 @@ up a new role following the steps below:
 2. From your console, create a new role: CREATE ROLE db_user WITH LOGIN PASSWORD 'db_password';
 ask for the db_user and db_password to your manager or tech lead
 
-------------------------------------------------------------
+...........................................................
 DATABASE_DEVELOPMENT_NAME='cloudnonic_tickeing_development'
 DATABASE_DEVELOPMENT_USER='cloudnonic_ticketing'
 DATABASE_DEVELOPMENT_PASSWORD='T00026742'
 DATABASE_DEVELOPMENT_HOST='localhost'
-----------------------------------------------------------
+..........................................................
 
 3. Provide the requred permisions to the new role rom the postgres console using: ALTER ROLE db_user CREATEDB
 
