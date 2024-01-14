@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe "CloudnonicTicketing API", type: :request do
-  fixtures :users, :events, :users
+  fixtures :users, :events, :tickets
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Events<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
