@@ -5,8 +5,8 @@ class Event < ApplicationRecord
   validates :name, uniqueness: true
   validates :tickets_threshold, numericality: { greater_than: 0 }
   validates :ticket_price, numericality: { greater_than: 0 }
-
-
+  validates :start_time, presence: true
+  validates :end_time, presence: true
 
 
   def tickets_available?(quantity)

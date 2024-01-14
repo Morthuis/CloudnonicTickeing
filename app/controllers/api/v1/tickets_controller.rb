@@ -14,12 +14,13 @@ class Api::V1::TicketsController < ApplicationController
   end
 
   def create
-    response = Api::V1::Tickets::Create.call(ticket_params)
+    response = Api::V1::Tickets::Create.call(ticket_params, current_api_v1_user.id)
     render json: { success: response[:success], data: response[:data] }, status: response[:status]
   end
 
   def update
-
+    response = Api::V1::Tickets::Update.call(ticket_params, params[:id].to_i, current_api_v1_user.id)
+    render json: { success: response[:success], data: response[:data] }, status: response[:status]
   end
 
   private

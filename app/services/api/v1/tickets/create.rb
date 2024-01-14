@@ -1,6 +1,6 @@
 class Api::V1::Tickets::Create < Api::V1::BaseService
 
-  def self.call(params)
+  def self.call(params, current_user_id)
     required_fields = %i[buyer_name quantity event_id]
     unless required_fields_present?(params, required_fields)
       return fail_response({ message: "Missing information: #{missing_params(params, required_fields)}" })
@@ -13,8 +13,9 @@ class Api::V1::Tickets::Create < Api::V1::BaseService
     end
     begin
       params[:total_price] = params[:quantity] * event.ticket_price
+      params[:user_id] = current_user_id
       Ticket.create!(params)
-      success_response("Congratulations, you have purchases #{params[:quantity]} tickets for #{event.name}")
+      success_response("Congratulations, you have purchased #{params[:quantity]} tickets for #{event.name}")
     rescue StandardError => e
       fail_response({ message: "Error: #{e.message}" }, 403)
     end

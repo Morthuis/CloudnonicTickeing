@@ -13,7 +13,7 @@ class Api::V1::Events::Update < Api::V1::BaseService
       return fail_response({ message: 'Event not found' }) if event.nil?
 
       return fail_response({ message: 'You are not authorized to update this event' }) unless event.user_id == current_user_id
-
+      event.update!(updateable_params)
       success_response("The event #{event.name} was updated successfully")
     rescue StandardError => e
       fail_response({ message: "Error: #{e.message}" }, 403)

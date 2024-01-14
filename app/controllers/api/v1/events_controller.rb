@@ -23,7 +23,6 @@ class Api::V1::EventsController < ApplicationController
     render json: { success: response[:success], data: response[:data] }, status: response[:status]
   end
 
-
   private
 
   def event_params
