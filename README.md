@@ -66,14 +66,14 @@ rails db:seed
 
 SIGN UP [POST]
 ```
-http://localhost:3000/api/v1/users
+http://localhost:3000/api/v1/users.json
 ```
 ```
 { "api_v1_user": {"email": "morthudisater@gmail.com", "password": "02012T20019"}}
 ```
 SIGN IN [POST]
 ```
-http://localhost:3000/api/v1/users/sign_in
+http://localhost:3000/api/v1/users/sign_in.json
 ```
 ```
 { "api_v1_user": {"email": "morthudisater@gmail.com", "password": "02012T20019", "remember_me": 0 }}
