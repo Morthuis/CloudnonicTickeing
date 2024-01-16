@@ -60,7 +60,7 @@ rails db:seed
 ```
 
 ## Tests
-  The test for this project were created using rspc, to run them, just type rspec on you terminal from the root path
+  The tests for this project were created using rspc, to run them, just type rspec on you terminal from the root path
 
 ## Api requests for Users
 
